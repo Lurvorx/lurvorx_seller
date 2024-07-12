@@ -15,5 +15,6 @@ Watch it here: [Preview - COMING SOON!]()
 **Framework compatible:**
 - ESX Legacy
 - More frameworks are comming soon.
+  
 
 **Well, I hope you liked it.**
