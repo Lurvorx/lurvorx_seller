@@ -9,8 +9,8 @@ You go to a ped and open the item sell menu. You choose what item you wanna sell
 Join our discord today: [Lurvorx Scripts](https://discord.gg/jJnE7yTYZW)
 
 Framework compatible:
-> ESX Legacy
-> More frameworks are comming soon.
+> - ESX Legacy
+> - More frameworks are comming soon.
 
 If you wanna sa a preview befor you download it, check our video.
 [Preview - COMING SOON!]()
