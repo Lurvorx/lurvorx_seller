@@ -1,4 +1,3 @@
-ESX = nil
 ESX = exports["es_extended"]:getSharedObject()
 
 isindeal = false
@@ -41,9 +40,9 @@ Citizen.CreateThread(function()
 
         local sleep = 500
 
-        if GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId(), false), Config.Text.TextCoords.x, Config.Text.TextCoords.y, Config.Text.TextCoords.z) < 2.5 then
+        if GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId(), false), Config.Text.TextCoords.x, Config.Text.TextCoords.y, Config.Text.TextCoords.z) < 1.5 then
             sleep = 10
-            ESX.ShowHelpNotification("~INPUT_CONTEXT~ " .. Config.Text.Text)
+            ESX.ShowHelpNotification(Config.Text.Text)
         end
         if IsControlJustPressed(0, Config.Menu.ControlToOpenMenu) then
             isindeal = true
@@ -71,11 +70,11 @@ function OpenItemSellMenu()
             elements = Config.Items
         }, 
         function (data, menu)
-            local name = data.current.item
+            local item = data.current.item
             local amount = data.current.value
-            local money = data.current.value * data.current.price
+            local price = data.current.value * data.current.price
 
-            TriggerServerEvent("lurvorx_seller:sellItem", name, amount, money)
+            TriggerServerEvent("lurvorx_seller:sellItem", item, amount, price)
         end,
         function(data, menu)
             menu.close()
